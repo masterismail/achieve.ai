@@ -47,6 +47,7 @@
 .iconhashtag {
   position: relative;
   flex-shrink: 0;
+  
 }
 .iconhashtag {
   width: 32px;
@@ -59,6 +60,7 @@
   font-weight: 600;
   display: inline-block;
   width: 42px;
+  
 }
 .iconText,
 .sideNavigationItem {

@@ -1,0 +1,108 @@
+.iconinbox {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .icons,
+  .topNavbar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .icons {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .topNavbar {
+    align-self: stretch;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+    border-bottom: 1px solid #e2e8f0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 48px;
+  }
+  .keepTrackOf,
+  .myGoals {
+    align-self: stretch;
+    position: relative;
+    line-height: 40px;
+  }
+  .keepTrackOf {
+    font-size: 14px;
+    line-height: 20px;
+    color: #5b6776;
+  }
+  .main,
+  .title {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .title {
+    width: 383px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .main {
+    align-self: stretch;
+    background-color: #fff;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    padding: 36px 48px;
+  }
+  .createNewGoal {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .createNewWallet {
+    align-self: stretch;
+    border-radius: 6px;
+    background-color: #f7f8fd;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    align-items: center;
+    padding: 23px 274px;
+    gap: 14px;
+  }
+  .body,
+  .content,
+  .createNewWallet,
+  .myWalletWebsite {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .content {
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0 48px;
+    gap: 24px;
+    font-size: 18px;
+    color: #4f46e5;
+  }
+  .body,
+  .myWalletWebsite {
+    align-items: flex-start;
+  }
+  .myWalletWebsite {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 998px;
+    overflow: hidden;
+    flex-direction: row;
+    text-align: left;
+    font-size: 32px;
+    color: #121212;
+    font-family: Inter;
+  }
+  

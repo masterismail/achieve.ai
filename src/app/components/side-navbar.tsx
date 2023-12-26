@@ -92,7 +92,7 @@ const SideNavbar: NextPage = () => {
         </div>
         <div className={styles.sideNavigationItem5}>
           <Image className={styles.avatarIcon} alt="" src="/avatar@2x.png" width={5000}
-            height={5000} />
+            height={5000}  />
           <div className={styles.adrianTra}>Adrian Tra</div>
         </div>
       </div>
