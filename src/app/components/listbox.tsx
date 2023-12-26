@@ -1,41 +1,33 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import { useState } from "react";
-import { Button, Menu, MenuItem } from "@mui/material";
-import styles from "./listbox-component.module.css";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-const ListboxComponent: NextPage = () => {
-  const [listboxComponentAnchorEl, setListboxComponentAnchorEl] =
-    useState<HTMLElement | null>(null);
-  const listboxComponentOpen = Boolean(listboxComponentAnchorEl);
-  const handleListboxComponentClick = (
-    event: React.MouseEvent<HTMLElement>
-  ) => {
-    setListboxComponentAnchorEl(event.currentTarget);
+export default function BasicSelect() {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
   };
-  const handleListboxComponentClose = () => {
-    setListboxComponentAnchorEl(null);
-  };
+
   return (
-    <div>
-      <Button
-        sx={{ width: 268 }}
-        id="button-Priority"
-        aria-controls="menu-Priority"
-        aria-haspopup="true"
-        aria-expanded={listboxComponentOpen ? "true" : undefined}
-        onClick={handleListboxComponentClick}
-        color="primary"
-      >
-        Priority
-      </Button>
-      <Menu
-        anchorEl={listboxComponentAnchorEl}
-        open={listboxComponentOpen}
-        onClose={handleListboxComponentClose}
-      />
-    </div>
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
   );
-};
-
-export default ListboxComponent;
+}

@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import StateDefaultTypeMainSize from "./state-default-type-main-size";
 import styles from "./side-navbar.module.css";
 import Image from "next/image";
 
@@ -11,63 +12,64 @@ const SideNavbar: NextPage = () => {
             className={styles.screenshotFrom2023122414}
             alt=""
             src="/screenshot-from-20231224-144846-1@2x.png"
-            width={5000}
-            height={5000}
+            width={2000}
+            height={2000}
           />
           <div className={styles.iconButtonWrapper}>
-            <div className={styles.iconButton}>
-              <Image className={styles.iconmenu} alt="" src="/iconmenu@2x.png" width={5000} height={5000} />
-            </div>
+            <StateDefaultTypeMainSize
+              itemCode="/iconmenu@2x.png"
+              stateDefaultTypeMainSizeBackgroundColor="#4f46e5"
+            />
           </div>
         </div>
         <div className={styles.mainNavigation}>
           <div className={styles.mainNavigation}>
-            <div className={styles.sideNavigationItem}>
+            <button className={styles.sideNavigationItem}>
+              <Image
+                className={styles.heroiconsOutlinerocketLaunc}
+                alt=""
+                src="/heroiconsoutlinerocketlaunch@2x.png"
+                width={2000}
+                height={2000}
+              />
               <div className={styles.iconText}>
-                <Image
-                  className={styles.iconhashtag}
-                  alt=""
-                  src="/iconhashtag@2x.png"
-                  width={5000}
-                  height={5000}
-                />
                 <div className={styles.goals}>Goals</div>
               </div>
-            </div>
-            <div className={styles.sideNavigationItem1}>
+            </button>
+            <button className={styles.sideNavigationItem1}>
               <Image
-                className={styles.heroiconsOutlinerectangleSt}
+                className={styles.heroiconsOutlinerocketLaunc}
                 alt=""
                 src="/heroiconsoutlinerectanglestack@2x.png"
-                width={5000}
-                height={5000}
+                width={2000}
+                height={2000}
               />
-              <div className={styles.iconText1}>
-                <div className={styles.tasks}>Tasks</div>
+              <div className={styles.iconText}>
+                <div className={styles.goals}>Tasks</div>
               </div>
-            </div>
-            <div className={styles.sideNavigationItem2}>
+            </button>
+            <button className={styles.sideNavigationItem2}>
               <Image
-                className={styles.heroiconsOutlinerectangleSt}
+                className={styles.heroiconsOutlinerocketLaunc}
                 alt=""
                 src="/heroiconsoutlinepresentationchartline@2x.png"
-                width={5000}
-                height={5000}
+                width={2000}
+                height={2000}
               />
               <div className={styles.iconText2}>
-                <div className={styles.tasks}>Progress</div>
+                <div className={styles.goals}>Progress</div>
               </div>
-            </div>
-            <div className={styles.sideNavigationItem3}>
-              <div className={styles.iconText}>
+            </button>
+            <button className={styles.sideNavigationItem3}>
+              <div className={styles.iconText3}>
                 <Image
                   className={styles.iconhashtag}
                   alt=""
                   src="/iconhashtag@2x.png"
-                  width={5000}
-                  height={5000}
+                  width={2000}
+                  height={2000}
                 />
-                <div className={styles.tasks}>
+                <div className={styles.chat}>
                   <p className={styles.badges}>{`Badges `}</p>
                   <p className={styles.badges}>(coming soon)</p>
                 </div>
@@ -75,26 +77,26 @@ const SideNavbar: NextPage = () => {
               <div className={styles.notificationSign}>
                 <div className={styles.div}>12</div>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>
       <div className={styles.footer}>
-        <div className={styles.sideNavigationItem4}>
-          <div className={styles.iconText}>
-            <Image className={styles.iconhashtag} alt="" src="/iconcog@2x.png" width={5000}
-            height={5000}/>
+        <button className={styles.sideNavigationItem4}>
+          <div className={styles.iconText3}>
+            <Image className={styles.iconhashtag} alt="" src="/iconcog@2x.png" width={2000}
+            height={2000} />
             <div className={styles.chat1}>Settings</div>
           </div>
-        </div>
+        </button>
         <div className={styles.divider}>
           <div className={styles.line} />
         </div>
-        <div className={styles.sideNavigationItem5}>
-          <Image className={styles.avatarIcon} alt="" src="/avatar@2x.png" width={5000}
-            height={5000}  />
+        <button className={styles.sideNavigationItem1}>
+          <Image className={styles.avatarIcon} alt="" src="/avatar@2x.png" width={2000}
+            height={2000}/>
           <div className={styles.adrianTra}>Adrian Tra</div>
-        </div>
+        </button>
       </div>
     </div>
   );

@@ -1,86 +1,28 @@
-.iconmenu,
 .screenshotFrom2023122414 {
   position: relative;
   width: 211px;
   height: 40px;
   object-fit: cover;
 }
-.iconmenu {
-  width: 18px;
-  height: 18px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.iconButton,
 .iconButtonWrapper {
+  width: 78px;
+  height: 33px;
   display: flex;
-  box-sizing: border-box;
-}
-.iconButton {
-  border-radius: 1000px;
-  background-color: #4f46e5;
-  width: 40px;
-  height: 40px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-}
-.iconButtonWrapper {
-  width: 147px;
-  height: 44px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 .logoIcon {
   align-self: stretch;
-  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 24px 0;
 }
-.goals,
-.iconhashtag {
-  position: relative;
-  flex-shrink: 0;
-  
-}
-.iconhashtag {
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.goals {
-  line-height: 20px;
-  font-weight: 600;
-  display: inline-block;
-  width: 42px;
-  
-}
-.iconText,
-.sideNavigationItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.iconText {
-  flex: 1;
-  flex-shrink: 0;
-  gap: 14px;
-}
-.sideNavigationItem {
-  align-self: stretch;
-  border-radius: 4px;
-  background-color: #191a38;
-  padding: 20px;
-}
-.heroiconsOutlinerectangleSt {
+.heroiconsOutlinerocketLaunc {
   position: relative;
   width: 24px;
   height: 24px;
@@ -88,12 +30,16 @@
   flex-shrink: 0;
   object-fit: cover;
 }
-.tasks {
+.goals {
   position: relative;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 600;
+  font-family: Inter;
+  color: #cbcfd5;
+  text-align: left;
 }
-.iconText1 {
+.iconText {
   width: 179px;
   flex-shrink: 0;
   display: flex;
@@ -101,13 +47,36 @@
   align-items: center;
   justify-content: flex-start;
 }
+.sideNavigationItem,
+.sideNavigationItem1 {
+  cursor: pointer;
+  border: 0;
+  padding: 20px;
+  background-color: #080325;
+  border-radius: 4px;
+  gap: 17px;
+}
+.sideNavigationItem {
+  width: 264px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.sideNavigationItem:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.08)
+    ),
+    #080325;
+}
 .sideNavigationItem1 {
   align-self: stretch;
-  border-radius: 4px;
-  background-color: #080325;
-  padding: 20px;
-  gap: 17px;
-  color: #cbcfd5;
+}
+.sideNavigationItem1:hover,
+.sideNavigationItem2:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .iconText2,
 .sideNavigationItem1,
@@ -122,23 +91,54 @@
   flex-shrink: 0;
 }
 .sideNavigationItem2 {
+  cursor: pointer;
+  border: 0;
+  padding: 20px;
+  background-color: #080325;
   align-self: stretch;
   border-radius: 4px;
-  background-color: #080325;
   overflow: hidden;
-  padding: 20px;
   gap: 17px;
-  color: #cbcfd5;
+}
+.iconhashtag {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 .badges {
   margin: 0;
+}
+.chat {
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: Inter;
+  color: #fff;
+  text-align: left;
+}
+.iconText3 {
+  flex: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
 }
 .div {
   position: absolute;
   top: 4px;
   left: 6px;
+  font-size: 10px;
   line-height: 16px;
   font-weight: 600;
+  font-family: Inter;
+  color: #fff;
+  text-align: center;
 }
 .notificationSign {
   position: relative;
@@ -148,48 +148,59 @@
   height: 24px;
   overflow: hidden;
   flex-shrink: 0;
-  text-align: center;
-  font-size: 10px;
 }
 .sideNavigationItem3 {
+  cursor: pointer;
+  border: 0;
+  padding: 20px;
+  background-color: transparent;
   align-self: stretch;
   border-radius: 4px;
-  background-color: #080325;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
   gap: 16px;
+}
+.sideNavigationItem3:hover {
+  background-color: rgba(8, 3, 37, 0.1);
 }
 .header,
 .mainNavigation {
+  width: 264px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.mainNavigation {
-  width: 264px;
-}
 .header {
   flex: 1;
+  width: 292px;
 }
 .chat1 {
   flex: 1;
   position: relative;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 600;
+  font-family: Inter;
+  color: #cbcfd5;
+  text-align: left;
 }
 .sideNavigationItem4 {
+  cursor: pointer;
+  border: 0;
+  padding: 20px;
+  background-color: #080325;
   align-self: stretch;
   border-radius: 4px;
-  background-color: #080325;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
+}
+.sideNavigationItem4:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .line {
   position: absolute;
@@ -216,36 +227,24 @@
 .adrianTra {
   flex: 1;
   position: relative;
+  font-size: 16px;
   letter-spacing: -0.01em;
   line-height: 24px;
   font-weight: 600;
-}
-.footer,
-.sideNavbar,
-.sideNavigationItem5 {
-  background-color: #080325;
-  display: flex;
-  justify-content: flex-start;
-}
-.sideNavigationItem5 {
-  align-self: stretch;
-  border-radius: 4px;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px;
-  gap: 17px;
-  font-size: 16px;
+  font-family: Inter;
   color: #fff;
+  text-align: left;
 }
 .footer,
 .sideNavbar {
+  background-color: #080325;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 .footer {
   align-self: stretch;
-  font-size: 14px;
-  color: #cbcfd5;
 }
 .sideNavbar {
   width: 300px;
@@ -253,8 +252,4 @@
   padding: 0 18px 32px;
   box-sizing: border-box;
   gap: 48px;
-  text-align: left;
-  font-size: 15px;
-  color: #fff;
-  font-family: Inter;
 }
