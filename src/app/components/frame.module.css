@@ -1,0 +1,191 @@
+.goal {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #54595e;
+  }
+  .text14px,
+  .text14px1 {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .text14px1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .input,
+  .text {
+    align-self: stretch;
+  }
+  .text {
+    position: relative;
+    height: 24px;
+  }
+  .input {
+    border: 1px solid #d1d1d1;
+    outline: 0;
+    font-weight: 500;
+    font-family: Inter;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 16px;
+    color: #acacac;
+  }
+  .textParent {
+    align-self: stretch;
+    height: 68px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .frameWrapper,
+  .goalParent,
+  .textParent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .goalParent {
+    flex: 1;
+    flex-direction: column;
+    gap: 11px;
+  }
+  .frameWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 670px;
+    flex-direction: row;
+  }
+  .label {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Inter;
+    color: #f5f5f5;
+    text-align: left;
+  }
+  .interfacecopyIcon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .iconcontainer {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .button,
+  .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: 14px 20px;
+    background-color: #4f4f4f;
+    border-radius: 8px;
+    width: 180px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 10px;
+  }
+  .buttonWrapper {
+    position: absolute;
+    top: 174px;
+    left: 0;
+    width: 670px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .frameGroup {
+    position: relative;
+    width: 670px;
+    height: 218px;
+    font-size: 12px;
+    color: #4f4f4f;
+  }
+  .deadlineToComplete {
+    position: relative;
+    font-weight: 600;
+  }
+  .deadlineToCompleteThisGoalParent,
+  .textGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .textGroup {
+    align-self: stretch;
+    gap: 4px;
+    font-size: 12px;
+    color: #4f4f4f;
+  }
+  .deadlineToCompleteThisGoalParent {
+    flex: 1;
+    gap: 16px;
+  }
+  .buttonContainer {
+    position: absolute;
+    top: 148px;
+    left: 0;
+    width: 670px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .frameContainer {
+    position: relative;
+    width: 670px;
+    height: 192px;
+  }
+  .text14px3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 24px;
+  }
+  .groupParent {
+    position: absolute;
+    top: -0.5px;
+    left: -0.5px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 20px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dee2e6;
+    box-sizing: border-box;
+    width: 751px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 40px;
+    gap: 36px;
+  }
+  .frameParent {
+    width: 750px;
+    height: 948px;
+    text-align: left;
+    font-size: 20px;
+    color: #54595e;
+    font-family: Inter;
+  }
+  
