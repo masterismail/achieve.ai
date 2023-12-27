@@ -1,13 +1,42 @@
 import type { NextPage } from "next";
-import StateDefaultTypeMainSize from "./state-default-type-main-size";
+import StateDefaultTypeMainSize from "/home/tahseer/Desktop/Workshop/achieve.ai/src/app/components/state-default-type-main-size";
 import styles from "./side-navbar.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 const SideNavbar: NextPage = () => {
+  const router = useRouter();
+
+  const redirectToGoals = () => {
+    router.push("/goals"); // Replace "/goals" with the actual route for Goals page
+  };
+  
+  const redirectToIndex = () => {
+    router.push("/"); // Replace "/goals" with the actual route for Goals page
+  };
+
+  const redirectToSettings = () => {
+    router.push("/settings"); // Replace "/goals" with the actual route for Goals page
+  };
+
+  const redirectToProfile = () => {
+    router.push("/profile"); // Replace "/goals" with the actual route for Goals page
+  };
+
+  const redirectToTasks = () => {
+    router.push("/tasks"); // Replace "/tasks" with the actual route for Tasks page
+  };
+
+  const redirectToProgress = () => {
+    router.push("/progress"); // Replace "/progress" with the actual route for Progress page
+  };
+
   return (
+
     <div className={styles.sideNavbar}>
       <div className={styles.header}>
-        <div className={styles.logoIcon}>
+        <div className={styles.logoIcon} onClick={redirectToIndex}>
           <Image
             className={styles.screenshotFrom2023122414}
             alt=""
@@ -22,9 +51,9 @@ const SideNavbar: NextPage = () => {
             />
           </div>
         </div>
-        <div className={styles.mainNavigation}>
+        <div className={styles.mainNavigation}> 
           <div className={styles.mainNavigation}>
-            <button className={styles.sideNavigationItem}>
+            <button className={styles.sideNavigationItem} onClick={redirectToGoals}>
               <Image
                 className={styles.heroiconsOutlinerocketLaunc}
                 alt=""
@@ -36,7 +65,7 @@ const SideNavbar: NextPage = () => {
                 <div className={styles.goals}>Goals</div>
               </div>
             </button>
-            <button className={styles.sideNavigationItem1}>
+            <button className={styles.sideNavigationItem1} onClick={redirectToTasks}>
               <Image
                 className={styles.heroiconsOutlinerocketLaunc}
                 alt=""
@@ -48,7 +77,7 @@ const SideNavbar: NextPage = () => {
                 <div className={styles.goals}>Tasks</div>
               </div>
             </button>
-            <button className={styles.sideNavigationItem2}>
+            <button className={styles.sideNavigationItem2} onClick={redirectToProgress} >
               <Image
                 className={styles.heroiconsOutlinerocketLaunc}
                 alt=""
@@ -60,7 +89,7 @@ const SideNavbar: NextPage = () => {
                 <div className={styles.goals}>Progress</div>
               </div>
             </button>
-            <button className={styles.sideNavigationItem3}>
+            <button className={styles.sideNavigationItem3} onClick={redirectToProgress}>
               <div className={styles.iconText3}>
                 <Image
                   className={styles.iconhashtag}
@@ -82,7 +111,7 @@ const SideNavbar: NextPage = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <button className={styles.sideNavigationItem4}>
+        <button className={styles.sideNavigationItem4} onClick={redirectToSettings}>
           <div className={styles.iconText3}>
             <Image className={styles.iconhashtag} alt="" src="/iconcog@2x.png" width={2000}
             height={2000} />
@@ -92,7 +121,7 @@ const SideNavbar: NextPage = () => {
         <div className={styles.divider}>
           <div className={styles.line} />
         </div>
-        <button className={styles.sideNavigationItem1}>
+        <button className={styles.sideNavigationItem1} onClick={redirectToProfile}>
           <Image className={styles.avatarIcon} alt="" src="/avatar@2x.png" width={2000}
             height={2000}/>
           <div className={styles.adrianTra}>Adrian Tra</div>
