@@ -151,20 +151,20 @@ const BasicModal: NextPage = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  return (
-    <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Frame />
-        </Box>
-      </Modal>
-    </div>
+    return (
+        <div style={{ position: 'absolute', top: 0, right: 0 }}>
+        <Button onClick={handleOpen}>Add Goal</Button>
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            
+            <Frame />
+        
+        </Modal>
+        </div>
   );
 };
 

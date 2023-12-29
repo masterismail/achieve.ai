@@ -1,0 +1,712 @@
+.frequentlyAskedQuestions {
+    position: absolute;
+    top: 8px;
+    left: calc(50% - 200.4px);
+    letter-spacing: -0.64px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400.9px;
+    height: 32px;
+  }
+  .div1,
+  .whatCanI {
+    position: absolute;
+    font-family: Inter;
+    color: #160647;
+    text-align: left;
+  }
+  .whatCanI {
+    top: calc(50% - 10px);
+    left: 0;
+    font-size: 19px;
+    line-height: 20px;
+  }
+  .div1 {
+    top: calc(50% - 23.5px);
+    left: calc(50% + 344.6px);
+    font-size: 50px;
+    line-height: 45px;
+  }
+  .frame3 {
+    position: relative;
+    width: 746px;
+    height: 20px;
+  }
+  .autoLayoutHorizontal {
+    cursor: pointer;
+    border: 0;
+    padding: 26px 24px;
+    background-color: #eef2f7;
+    border-radius: 16px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .canIGet,
+  .whatLanguagesDoes {
+    position: absolute;
+    left: 0;
+    line-height: 20px;
+    font-family: Inter;
+    color: #160647;
+    text-align: left;
+  }
+  .whatLanguagesDoes {
+    top: calc(50% - 10px);
+    font-size: 18px;
+  }
+  .canIGet {
+    top: 0;
+    font-size: 19px;
+  }
+  .whereCanI {
+    margin: 0;
+  }
+  .whereCanIContainer {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 19px;
+    line-height: 20px;
+    font-family: Inter;
+    color: #160647;
+    text-align: left;
+  }
+  .autoLayoutVertical {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 397px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .frame2 {
+    position: absolute;
+    top: 925.3px;
+    left: calc(50% - 480px);
+    width: 960px;
+    height: 504px;
+  }
+  .copyaiReviews,
+  .copyaiVsJasperai,
+  .product {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    line-height: 21.6px;
+    display: flex;
+    align-items: center;
+    width: 53.4px;
+    height: 15px;
+  }
+  .copyaiReviews,
+  .copyaiVsJasperai {
+    top: 44.8px;
+    line-height: 28.8px;
+    width: 145.4px;
+    height: 20px;
+  }
+  .copyaiVsJasperai {
+    top: 85.6px;
+    width: 175.6px;
+  }
+  .copyaiApi {
+    top: 126.4px;
+    font-size: 19px;
+    width: 103.5px;
+  }
+  .alternatives,
+  .copyaiApi,
+  .templates,
+  .useFreeAi,
+  .writeIn25 {
+    position: absolute;
+    left: 0;
+    line-height: 28.8px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  .alternatives {
+    top: 167.2px;
+    font-size: 19px;
+    width: 107.9px;
+  }
+  .templates,
+  .useFreeAi,
+  .writeIn25 {
+    top: 208px;
+    width: 92.4px;
+  }
+  .useFreeAi,
+  .writeIn25 {
+    top: 248.8px;
+    width: 211.4px;
+  }
+  .useFreeAi {
+    top: 289.6px;
+    width: 154.3px;
+  }
+  .company,
+  .frame11,
+  .frame12 {
+    position: absolute;
+    left: 0;
+    width: 237.5px;
+  }
+  .frame12 {
+    top: 51.6px;
+    height: 314.4px;
+    font-size: 18px;
+    color: #160647;
+  }
+  .company,
+  .frame11 {
+    top: 0;
+    height: 366px;
+  }
+  .company {
+    top: 3px;
+    line-height: 21.6px;
+    display: flex;
+    align-items: center;
+    width: 65.6px;
+    height: 15px;
+  }
+  .blog {
+    top: 4px;
+    width: 40.3px;
+  }
+  .affiliateProgram,
+  .blog,
+  .careers,
+  .community,
+  .creatorProgram,
+  .linkedin,
+  .press,
+  .twitter {
+    position: absolute;
+    left: 0;
+    line-height: 28.8px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  .press {
+    top: 44.8px;
+    font-size: 18px;
+    width: 48px;
+  }
+  .affiliateProgram,
+  .careers,
+  .community,
+  .creatorProgram,
+  .linkedin,
+  .twitter {
+    top: 85.6px;
+    width: 70.5px;
+  }
+  .affiliateProgram,
+  .community,
+  .creatorProgram,
+  .linkedin,
+  .twitter {
+    top: 126.4px;
+    width: 105.6px;
+  }
+  .affiliateProgram,
+  .creatorProgram,
+  .linkedin,
+  .twitter {
+    top: 167.2px;
+    width: 151px;
+  }
+  .affiliateProgram,
+  .linkedin,
+  .twitter {
+    top: 208px;
+    width: 63.7px;
+  }
+  .affiliateProgram,
+  .linkedin {
+    top: 248.8px;
+    width: 76.9px;
+  }
+  .affiliateProgram {
+    top: 289.6px;
+    width: 152.8px;
+  }
+  .frame13,
+  .frame14 {
+    position: absolute;
+    width: 237.5px;
+  }
+  .frame14 {
+    top: 51.6px;
+    left: 0;
+    height: 314.4px;
+    font-size: 19px;
+    color: #160647;
+  }
+  .frame13 {
+    top: 0;
+    left: 287.5px;
+    height: 366px;
+  }
+  .contactUs,
+  .support,
+  .weeklyDemos {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+  }
+  .support {
+    top: 3px;
+    line-height: 21.6px;
+    width: 54.8px;
+    height: 15px;
+  }
+  .contactUs,
+  .weeklyDemos {
+    line-height: 28.8px;
+    height: 20px;
+  }
+  .weeklyDemos {
+    top: 4px;
+    font-size: 19px;
+    width: 135.1px;
+  }
+  .contactUs {
+    top: 44.8px;
+    width: 100.2px;
+  }
+  .reportABug {
+    top: 85.6px;
+    width: 116.1px;
+  }
+  .reportABug,
+  .reportAnOutage,
+  .requestANew {
+    position: absolute;
+    left: 0;
+    line-height: 28.8px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  .reportAnOutage {
+    top: 126.4px;
+    font-size: 19px;
+    width: 160.2px;
+  }
+  .requestANew {
+    top: 167.2px;
+    width: 208.2px;
+  }
+  .frame15,
+  .frame16 {
+    position: absolute;
+    width: 237.5px;
+  }
+  .frame16 {
+    top: 51.6px;
+    left: 0;
+    height: 192px;
+    font-size: 18px;
+    color: #160647;
+  }
+  .frame15 {
+    top: 16.3px;
+    left: 575px;
+    height: 366px;
+  }
+  .forBlogWriters,
+  .forEmailMarketers,
+  .forSocialMedia,
+  .useCases {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    line-height: 21.6px;
+    display: flex;
+    align-items: center;
+    width: 69.2px;
+    height: 15px;
+  }
+  .forBlogWriters,
+  .forEmailMarketers,
+  .forSocialMedia {
+    top: 4px;
+    line-height: 28.8px;
+    width: 145.5px;
+    height: 20px;
+  }
+  .forEmailMarketers,
+  .forSocialMedia {
+    top: 44.8px;
+    width: 150.6px;
+    height: 48.8px;
+  }
+  .forEmailMarketers {
+    top: 114.4px;
+    width: 180px;
+    height: 20px;
+  }
+  .frame18 {
+    position: absolute;
+    top: 51.6px;
+    left: 0;
+    width: 237.5px;
+    height: 139.2px;
+    font-size: 19px;
+    color: #160647;
+  }
+  .frame10,
+  .frame17 {
+    position: absolute;
+    height: 366px;
+  }
+  .frame17 {
+    top: 0;
+    left: 862.5px;
+    width: 237.5px;
+    font-size: 13px;
+  }
+  .frame10 {
+    width: calc(100% - 100px);
+    top: 50px;
+    right: 50px;
+    left: 50px;
+  }
+  .frameIcon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .autoLayoutHorizontal6 {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frame20 {
+    position: relative;
+    border-radius: 100px;
+    background: linear-gradient(transparent, transparent), #f8fcfb;
+    border: 2px solid #def7f0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .autoLayoutHorizontal5 {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 970px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  .copyaiInc {
+    position: absolute;
+    top: calc(50% - 9.75px);
+    right: 302.1px;
+    line-height: 19.5px;
+    color: #76838f;
+  }
+  .privacyNotice,
+  .status,
+  .termsOfService {
+    position: absolute;
+    top: 5.2px;
+    left: 278.5px;
+    line-height: 19.5px;
+  }
+  .status,
+  .termsOfService {
+    left: 383.3px;
+  }
+  .status {
+    left: 500.2px;
+  }
+  .screenshotFrom2023122415 {
+    position: absolute;
+    top: 0.3px;
+    left: -34px;
+    width: 151px;
+    height: 27px;
+    object-fit: cover;
+  }
+  .frame23 {
+    position: absolute;
+    top: calc(50% - 6.9px);
+    left: 0;
+    width: 557.1px;
+    height: 29.9px;
+  }
+  .frame19 {
+    width: calc(100% - 100px);
+    top: 466px;
+    right: 50px;
+    left: 50px;
+    border-top: 1px solid #f9feff;
+    box-sizing: border-box;
+    height: 56px;
+    font-size: 12px;
+    color: #47beb9;
+  }
+  .frame19,
+  .frame8,
+  .frame9 {
+    position: absolute;
+  }
+  .frame9 {
+    top: 15px;
+    left: 126px;
+    border-radius: 36px;
+    background-color: #f8fcfb;
+    width: 1200px;
+    height: 552px;
+  }
+  .frame8 {
+    width: calc(100% - 60px);
+    top: 1494px;
+    right: 30px;
+    left: 30px;
+    height: 567px;
+    text-align: left;
+    font-size: 14px;
+    color: #76838f;
+  }
+  .frame25,
+  .frameIcon3 {
+    position: absolute;
+    overflow: hidden;
+  }
+  .frameIcon3 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .frame25 {
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+  }
+  .frameIcon4 {
+    position: relative;
+    width: 33.8px;
+    height: 33.8px;
+    object-fit: cover;
+  }
+  .autoLayoutHorizontal9,
+  .frame24 {
+    position: absolute;
+    overflow: hidden;
+  }
+  .autoLayoutHorizontal9 {
+    top: calc(50% - 37.1px);
+    left: calc(50% - 37.1px);
+    border-radius: 9999px;
+    background-color: rgba(22, 6, 71, 0.55);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20.25px;
+  }
+  .frame24 {
+    width: calc(100% - 560px);
+    top: 343px;
+    right: 280px;
+    left: 280px;
+    background-color: rgba(66, 133, 156, 0.3);
+    box-shadow: 0 5px 40px -18px rgba(66, 133, 156, 0.3);
+    border: 2px solid #92d9c5;
+    box-sizing: border-box;
+    height: 450px;
+  }
+  .seeHowIt {
+    position: absolute;
+    top: calc(50% - 931.5px);
+    left: calc(50% - 388px);
+    font-size: 72px;
+    letter-spacing: -2.16px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 810.4px;
+    height: 144px;
+  }
+  .frame1 {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 756px);
+    background-color: #f8fcfb;
+    width: 1512px;
+    height: 2081px;
+  }
+  .frame28 {
+    position: absolute;
+    top: 36px;
+    left: 98px;
+    width: 244px;
+    height: 43px;
+  }
+  .screenshotFrom20231224151 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 36px;
+    left: -27px;
+    width: 292px;
+    height: 55px;
+    background-image: url(/logod.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .frame29,
+  .login {
+    position: absolute;
+  }
+  .frame29 {
+    top: 0;
+    left: 269.2px;
+    width: 377.5px;
+    height: 103px;
+  }
+  .login {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 23px;
+    right: 253.6px;
+    font-size: 15px;
+    line-height: 23.04px;
+    font-family: Inter;
+    color: #160647;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 40.3px;
+    height: 16px;
+  }
+  .getStarted {
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: Inter;
+    color: #fff;
+    text-align: center;
+  }
+  .autoLayoutHorizontal10 {
+    cursor: pointer;
+    border: 0;
+    padding: 19.5px 30.765625px 19.5px 29px;
+    background-color: #47beb9;
+    position: absolute;
+    top: 4px;
+    left: 60.1px;
+    border-radius: 9999px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .autoLayoutHorizontal10:hover {
+    background-color: rgba(71, 190, 185, 0.75);
+  }
+  .frame30 {
+    position: absolute;
+    top: 20px;
+    left: 906.1px;
+    width: 293.9px;
+    height: 63px;
+  }
+  .frame27 {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 600px);
+    width: 1200px;
+    height: 100px;
+  }
+  .frame26 {
+    left: calc(50% - 756px);
+    background-color: #f8fcfb;
+    width: 1512px;
+    height: 100px;
+  }
+  .frame,
+  .frame26,
+  .frame31 {
+    position: absolute;
+    top: 0;
+  }
+  .frame {
+    width: 100%;
+    right: 0;
+    left: 0;
+    height: 2181px;
+  }
+  .frame31 {
+    left: 1432px;
+    width: 48px;
+    height: 950px;
+    overflow: hidden;
+  }
+  .div {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 2161px;
+    text-align: center;
+    font-size: 30px;
+    color: #160647;
+    font-family: Inter;
+  }
+
+  .buttonWithBackgroundImage {
+    /* Define the image as the background */
+    background-image: url('/logod.png');
+    /* Set the background size and other properties as needed */
+    background-size: cover; /* Adjust as per your requirement */
+    /* Ensure the button has a width and height to display the background */
+    width: 100px; /* Adjust width */
+    height: 100px; /* Adjust height */
+    /* Optionally, you might want to remove default button styles */
+    border: none;
+    padding: 0;
+    /* Add any other necessary styles */
+  }

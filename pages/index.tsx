@@ -1,20 +1,20 @@
 // Import statements
 import Image from 'next/image';
 import SideNavbar from '/home/tahseer/Desktop/Workshop/achieve.ai/src/app/components/side-navbar';
-import Frame from '@/app/components/frame';
+
 import BasicModal from '@/app/components/goalmodal';
+import TableComponent from '@/app/components/testsupa';
+import Frame from '@/app/components/mainpage';
+import App from './auth/signup';
 // Component definition
 export default function Home() {
   return (
     <div>
-      <h1>bhai index page hai ye</h1>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        {/* Content */}
-      </div>
-      <SideNavbar />
+    <Frame />
+    </div>
       
-        <BasicModal/>
-      </div>
+        
+      
     
   );
 }

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import styles from "./frame.module.css";
+import styles from "/home/tahseer/Desktop/Workshop/achieve.ai/src/app/components/mainpage.module.css";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
