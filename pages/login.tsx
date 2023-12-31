@@ -27,6 +27,7 @@ function Login() {
                 supabaseClient={supabase}
                 appearance={{theme : ThemeSupa}}
                 providers={['google', 'github']}
+                redirectTo="http://localhost:3000/success"
                 />
             </header>
         

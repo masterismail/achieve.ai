@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import { use, useState } from "react";
 import { useEffect } from "react";
+import Layout from "@/app/components/layout";
 
 function Success() {
     const [user, setUser] = useState({});
@@ -32,11 +33,24 @@ function Success() {
 
     return (
         <div className="App">
+             
             <header className="App-header">
-            <button onClick={() => signOutUser()}>Sign Out</button>
-                <h1>Success</h1>
+            { Object.keys(user).length !== 0 ?
+
+             <>
+              
+              <Layout />
+              <button onClick={() => signOutUser()}>Sign Out</button> 
+            </>
+
+            : 
+            <>
+                <h1>kya hua sastee hacker ? jao login karke aao</h1>
+                <button onClick={() => signOutUser()}>go back home</button>
+            </>
+            }
             </header>
-        
+            
         </div>
     )
     }
