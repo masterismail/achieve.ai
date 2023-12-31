@@ -1,23 +1,39 @@
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import supabase from '@/app/supabaseclient';
-import { Theme } from '@supabase/auth-ui-shared';
-import styles from 'pages/auth/signup.module.css';
+import { useRouter } from 'next/router';
 
-
+interface AuthEvent {
+  user: any;
+  error: any;
+}
 
 const Page: React.FC = () => {
+  const router = useRouter();
+
+  const handleSupabaseAuth = async (event: AuthEvent) => {
+    const { user, error } = event;
+
+    if (user) {
+      // Successful sign-in
+      router.push('/dashboard'); // Replace with your desired redirect path
+    } else if (error) {
+      console.error(error); // Handle authentication errors
+      // Optionally display error messages to the user
+    }
+  };
+
   return (
     <div>
-    <header className={styles.mainContent}>
-    <Auth
-      supabaseClient={supabase}
-      appearance={{ theme: ThemeSupa }} // Apply predefined theme
-    />
-    </header>
+      <Auth
+        supabaseClient={supabase}
+        appearance={{ theme: ThemeSupa }}
+        redirectTo="/goals" // Redirect to the current page after login/signup
+        SITE_URL="http://localhost:3000"
+        onAuthStateChange={handleSupabaseAuth} // Handle authentication events
+      />
     </div>
   );
 };
 
-// Assuming this file is in the pages directory
 export default Page;

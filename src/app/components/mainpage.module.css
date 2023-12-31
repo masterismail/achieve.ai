@@ -587,9 +587,9 @@
     position: absolute;
     top: 36px;
     left: -27px;
-    width: 292px;
+    width: 310px;
     height: 55px;
-    background-image: url(/logod.png);
+    background-image: url(/logo.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

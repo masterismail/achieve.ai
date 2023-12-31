@@ -9,7 +9,7 @@ const Frame: NextPage = () => {
   const router = useRouter();
 
   const redirectToSignup = () => {
-    router.push("/auth/signup"); // Replace "/goals" with the actual route for Goals page
+    router.push("/login"); // Replace "/goals" with the actual route for Goals page
   };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -162,7 +162,7 @@ const Frame: NextPage = () => {
                       <img
                         className={styles.frameIcon}
                         alt=""
-                        src="/frame@2x.png"
+                        src="/logo.svg"
                       />
                     </div>
                   </div>
@@ -171,7 +171,7 @@ const Frame: NextPage = () => {
                       <img
                         className={styles.frameIcon}
                         alt=""
-                        src="/frame@2x.png"
+                        src="/logo.svg"
                       />
                     </div>
                   </div>
@@ -180,7 +180,7 @@ const Frame: NextPage = () => {
                       <img
                         className={styles.frameIcon}
                         alt=""
-                        src="/logo.png"
+                        src="/logo.svg"
                       />
                     </div>
                   </div>
@@ -193,7 +193,7 @@ const Frame: NextPage = () => {
                   <img
                     className={styles.screenshotFrom2023122415}
                     alt=""
-                    src="/logod.png"
+                    src="/logo.svg"
                   />
                 </div>
               </div>
@@ -201,10 +201,10 @@ const Frame: NextPage = () => {
           </div>
           <div className={styles.frame24}>
             <div className={styles.frame25}>
-              <img className={styles.frameIcon3} alt="" src="/logo.png" />
+              <img className={styles.frameIcon3} alt="" src="/logo.svg" />
             </div>
             <div className={styles.autoLayoutHorizontal9}>
-              <img className={styles.frameIcon4} alt="" src="/logo.png" />
+              <img className={styles.frameIcon4} alt="" src="/logo.svg" />
             </div>
           </div>
           <b className={styles.seeHowIt}>See How It Works !!</b>
