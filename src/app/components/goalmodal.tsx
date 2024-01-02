@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import type { NextPage } from 'next';
 import styles from './frame.module.css';
-
+import supabase from '../supabaseclient';
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
@@ -24,6 +24,32 @@ const Frame: React.FC = () => {
   const [input1Value, setInput1Value] = useState('');
   const [input2Value, setInput2Value] = useState('');
   const [input3Value, setInput3Value] = useState('');
+
+  const [userId, setUserId] = useState<string | null>(null);
+  
+  
+
+  const handleInsert = async () => {
+    try {
+      
+      const { data, error } = await supabase.from('goals').insert([
+        {
+          // Define the structure of your data here based on your table columns
+          goal_title: inputValue,
+          deadline: input1Value,
+          description: input2Value,
+          priority: input3Value,
+          // ... other columns ...
+        },
+      ]);
+      if (error) {
+        throw error;
+      }
+      console.log('Inserted data:', data);
+    } catch (error) {
+      console.error('Error inserting data:', error);
+    }
+  };
 
   return (
     <div className={styles.frameParent}>
@@ -133,7 +159,7 @@ const Frame: React.FC = () => {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button className={styles.button}>
+            <button className={styles.button}  onClick={handleInsert}>
               <div className={styles.label}>Yes, confirm</div>
               <div className={styles.iconcontainer}>
                 
@@ -152,14 +178,18 @@ const BasicModal: NextPage = () => {
   const handleClose = () => setOpen(false);
 
     return (
-        <div style={{ position: 'absolute', top: 0, right: 0 }}>
-        <Button onClick={handleOpen}>Add Goal</Button>
+        <div className={styles.container} >
+          <button onClick={handleOpen}  className={styles.buttondefaultprimaryiconTe}>
+      <img className={styles.iconplus} alt="" src="/Vector.svg" />
+      <div className={styles.add}>Add</div>
+    </button>
+    
         <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-        >
+        >   
             
             <Frame />
         

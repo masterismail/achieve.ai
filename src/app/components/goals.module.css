@@ -569,3 +569,41 @@
     font-family: Roboto;
   }
   
+  .heroiconsSolidplus {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .addTask {
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #fff;
+    text-align: center;
+  }
+  .frame14,
+  .frame17 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame17 {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 20px 11px 18px;
+    background-color: #372868;
+    border-radius: 4px;
+    width: 123px;
+    height: 40px;
+    gap: 8px;
+  }
+  .frame17:hover {
+    background-color: rgba(55, 40, 104, 0.8);
+  }

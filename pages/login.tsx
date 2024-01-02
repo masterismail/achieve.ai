@@ -1,10 +1,7 @@
-import { createClient } from "@supabase/supabase-js";
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import supabase from '@/app/supabaseclient';
-import { useNavigate } from 'react-router-dom';
 import { useRouter } from 'next/router';
-import { use } from "react";
 import { useEffect } from "react";
 
 function Login() {
@@ -21,7 +18,7 @@ function Login() {
 },[]);
     
     return (
-        <div className="App">
+        <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <header className="App-header">
                 <Auth
                 supabaseClient={supabase}

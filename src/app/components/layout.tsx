@@ -1,9 +1,27 @@
 import type { NextPage } from "next";
 import styles from "./layout.module.css";
-
+import Router from "next/router";
 const Layout: NextPage = () => {
+
+  const handleAwardClick = () => {
+    // Handle click for Award button
+    Router.push("/goals");
+    // Add your logic here
+  };
+
+  const handleTasksClick = () => {
+    // Handle click for Statistics button
+    Router.push("/tasks");
+    // Add your logic here
+  };
+
+  const handleStatisticsClick = () => {
+    // Handle click for Statistics button
+    Router.push("/progress");
+    // Add your logic here
+  };
+
   return (
-    <div className={styles.frame}>
       <div className={styles.autoLayoutHorizontal}>
         <div className={styles.frame1} />
         <div className={styles.frame2}>
@@ -16,7 +34,7 @@ const Layout: NextPage = () => {
                   src="logo.svg"
                 />
                 <div className={styles.autoLayoutVertical3}>
-                  <button className={styles.autoLayoutHorizontal1}>
+                  <button className={styles.autoLayoutHorizontal1} onClick={handleAwardClick}>
                     <div className={styles.frame3}>
                       <img
                         className={styles.award21}
@@ -26,7 +44,7 @@ const Layout: NextPage = () => {
                     </div>
                     <div className={styles.goals}>Goals</div>
                   </button>
-                  <button className={styles.autoLayoutHorizontal2}>
+                  <button className={styles.autoLayoutHorizontal2} onClick={handleTasksClick}>
                     <div className={styles.frame3}>
                       <div className={styles.frame5}>
                         <img
@@ -38,7 +56,7 @@ const Layout: NextPage = () => {
                     </div>
                     <div className={styles.tasks}>Tasks</div>
                   </button>
-                  <button className={styles.frame6}>
+                  <button className={styles.frame6} onClick={handleStatisticsClick}>
                     <div className={styles.frame7}>
                       <div className={styles.frame8} />
                     </div>
@@ -59,15 +77,7 @@ const Layout: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className={styles.frame11}>
-        <div className={styles.frame12}>
-          <div className={styles.frame13}>
-            <img className={styles.frameIcon} alt="" src="/profile.png" />
-          </div>
-        </div>
-        <div className={styles.frame14} />
-      </div>
-    </div>
+    
   );
 };
 
