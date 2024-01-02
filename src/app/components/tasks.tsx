@@ -93,7 +93,6 @@ const Tasks: NextPage = () => {
                 </div>
               </div>
               <div className={styles.dataTable}>
-                <button onClick={console.log("yo")}>
                 <div className={styles.customer}>
                   <div className={styles.cad}>CAD</div>
                   <div className={styles.div1}>$500.00</div>
@@ -117,7 +116,6 @@ const Tasks: NextPage = () => {
                     <div className={styles.info}>Open</div>
                   </div>
                 </div>
-                </button>
                 <div className={styles.customer1}>
                   <div className={styles.cad}>CAD</div>
                   <div className={styles.div1}>$500.00</div>
