@@ -2,8 +2,8 @@
 const nextConfig = {
     // Other Next.js configuration options
   
-    // Add the output property for static HTML export
-    output: 'export',
+    // Use distDir for specifying the export directory
+    distDir: 'out', // Replace 'out' with your desired export directory name
   };
   
   module.exports = nextConfig;
