@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import StateDefaultTypeMainSize from "./state-default-type-main-size.module.css";
+import StateDefaultTypeMainSize from "./state-default-type-main-size";
 import styles from "./side-navbar.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
