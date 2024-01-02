@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useState } from 'react'; 
 import supabase from "../supabaseclient";
-import styles from "/home/tahseer/Desktop/Workshop/achieve.ai/src/app/components/mainpage.module.css";
+import styles from "./mainpage.module.css";
 import { useRouter } from "next/navigation";
 
 const Frame: NextPage = () => {

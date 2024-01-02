@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import StateDefaultTypeMainSize from "/home/tahseer/Desktop/Workshop/achieve.ai/src/app/components/state-default-type-main-size";
+import StateDefaultTypeMainSize from "./state-default-type-main-size.module.css";
 import styles from "./side-navbar.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
