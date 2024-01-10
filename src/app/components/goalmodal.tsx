@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import GoalType from './goalsType';
 import type { NextPage } from 'next';
 import styles from './frame.module.css';
 import supabase from '../supabaseclient';
@@ -19,7 +20,11 @@ const style = {
   p: 4,
 };
 
-const Frame: React.FC = ({ 
+type FrameType = {
+  appendGoalsList: (goal: GoalType) => void
+}
+
+const Frame: React.FC<FrameType> = ({ 
   appendGoalsList
 }) => {
   const [inputValue, setInputValue] = useState('');
@@ -35,7 +40,8 @@ const Frame: React.FC = ({
           goal_title: inputValue,
           deadline: input1Value,
           description: input2Value,
-          priority: input3Value,
+      priority: input3Value,
+          created_timestamp: ''
     }
     console.log('submitted goal form! payload to send to supabase', payload)
     alert("form submitted!")
@@ -150,12 +156,19 @@ const Frame: React.FC = ({
             </button>
           </div>
         </div>
-      </div>
+    </div>
     </div>
   );
 };
 
-const BasicModal = ({ 
+type BasicModalType = {
+  openModal: () => void,
+  closeModal: () => void,
+  modalState: boolean,
+  appendGoalsList: (goal: GoalType) => void
+}
+
+const BasicModal: NextPage<BasicModalType> = ({ 
   openModal, closeModal, modalState, 
   appendGoalsList,
 }) => {

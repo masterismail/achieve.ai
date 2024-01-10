@@ -4,9 +4,11 @@ import { useState } from 'react';
 import styles from "./goals.module.css";
 
 import GoalsModal from "./goalmodal"
+
+import GoalType from "./goalsType";
 import BasicModal from "./goalmodal";
 
-const GoalDetails: NextPage = ({ 
+const GoalDetails: NextPage<GoalType> = ({ 
   deadline,
   description,
   goal_title,
@@ -63,7 +65,13 @@ const GoalDetails: NextPage = ({
   )
 }
 
-const CreateNewGoalButton = ({ 
+type openModalType = () => void
+
+interface CreateNewGoalButtonProps { 
+  openModal: openModalType
+}
+
+const CreateNewGoalButton: NextPage<CreateNewGoalButtonProps> = ({ 
   openModal
 }) => { 
   return (
@@ -76,7 +84,15 @@ const CreateNewGoalButton = ({
   )
 }
 
-const Goals: NextPage = ({ 
+type goalsListType = Array<GoalType>
+  
+interface GoalsProps { 
+  // TODO - should remove the optionality later
+  openModal: openModalType,
+  goalsList: goalsListType
+}
+
+const Goals: NextPage<GoalsProps> = ({ 
   openModal,
   goalsList
 }) => {

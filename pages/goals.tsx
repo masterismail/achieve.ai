@@ -3,6 +3,8 @@ import SideNavbar from '../src/app/components/side-navbar';
 import ListboxComponent from '../src/app/components/listbox';
 import supabase from '@/app/supabaseclient';
 import Goals from '@/app/components/goals';
+import GoalType from '@/app/components/goalsType';
+
 import Layout from '@/app/components/layout';
 import BasicModal from '@/app/components/goalmodal';
 import React from 'react';
@@ -27,7 +29,7 @@ export default function Home() {
   ]);
 
   
-  const appendGoalsList = (goal) => { 
+  const appendGoalsList = (goal: GoalType) => { 
     goalsList.push(goal)
   }
 
