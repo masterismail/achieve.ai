@@ -4,6 +4,7 @@ import { useState } from 'react';
 import supabase from "../supabaseclient";
 import styles from "./mainpage.module.css";
 import { useRouter } from "next/navigation";
+import Goals from "./goals";
 
 const Frame: NextPage = () => {
   const router = useRouter();
@@ -199,14 +200,7 @@ const Frame: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className={styles.frame24}>
-            <div className={styles.frame25}>
-              <img className={styles.frameIcon3} alt="" src="/logo.svg" />
-            </div>
-            <div className={styles.autoLayoutHorizontal9}>
-              <img className={styles.frameIcon4} alt="" src="/logo.svg" />
-            </div>
-          </div>
+          <Goals />
           <b className={styles.seeHowIt}>See How It Works !!</b>
         </div>
         <div className={styles.frame26}>

@@ -1,11 +1,87 @@
 import type { NextPage } from "next";
+import { useState } from 'react';
+
 import styles from "./goals.module.css";
 
+import GoalsModal from "./goalmodal"
+import BasicModal from "./goalmodal";
 
+const GoalDetails: NextPage = ({ 
+  deadline,
+  description,
+  goal_title,
+  priority,
+  created_timestamp
+}) => { 
+  return (
+    <div className={styles.wallet}>
+              <div className={styles.priorityParent}>
+                <div className={styles.priority}>{`Priority : `}</div>
+                <img
+                  className={styles.vectorIcon}
+                  alt=""
+                  src="/vector@2x.png"
+                />
+                <textarea className={styles.text} />
+              </div>
+              <div className={styles.walletHeader}>
+                <div className={styles.iconTitle}>
+          <a className={styles.loose10Kg}>{goal_title}</a>
+                </div>
+                <div className={styles.createdDecember28Container}>
+                  <span>Created</span>
+          <span className={styles.span}>{ created_timestamp }</span>
+                </div>
+                <div className={styles.december282023Parent}>
+                  <textarea
+                    className={styles.december2820231}
+                    // placeholder="December 28, 2023"
+                    value={deadline}
+                  />
+                  <div className={styles.deadline}>
+                    <span>Deadline</span>
+                    <span className={styles.span}>{` : `}</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.progressStatus}>
+                <div className={styles.progressInformation}>
+                  <div className={styles.div1}>
+                    <span className={styles.span1}>{`30 `}</span>
+                    <span className={styles.span2}>/ 100</span>
+                  </div>
+                  <div className={styles.nominal}>30%</div>
+                </div>
+                <div className={styles.progressVisual}>
+                  <div className={styles.progressBar}>
+                    <div className={styles.background} />
+                    <div className={styles.progress} />
+                  </div>
+                </div>
+              </div>
+            </div>
+  )
+}
 
+const CreateNewGoalButton = ({ 
+  openModal
+}) => { 
+  return (
+     <div className={styles.autoLayoutHorizontal4}>
+      <button className={styles.frame16} onClick={openModal}>
+        <img className={styles.frameIcon1} alt="" src="/frame@2x.png" />
+        <div className={styles.createANew}>Create a New Goal</div>
+      </button>
+    </div>
+  )
+}
 
-
-const Goals: NextPage = () => {
+const Goals: NextPage = ({ 
+  openModal,
+  goalsList
+}) => {
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
   return (
     <div className={styles.div}>
       <div className={styles.frame}>
@@ -76,58 +152,22 @@ const Goals: NextPage = () => {
                 <div className={styles.getStarted}>Get Started</div>
               </div>
             </div>
-            <div className={styles.autoLayoutHorizontal4}>
-              <button className={styles.frame16}>
-                <img className={styles.frameIcon1} alt="" src="/frame@2x.png" />
-                <div className={styles.createANew}>Create a New Goal</div>
-              </button>
-            </div>
-            <div className={styles.autoLayoutHorizontal5} />
-            <div className={styles.wallet}>
-              <div className={styles.priorityParent}>
-                <div className={styles.priority}>{`Priority : `}</div>
-                <img
-                  className={styles.vectorIcon}
-                  alt=""
-                  src="/vector@2x.png"
+            <CreateNewGoalButton
+              openModal={openModal}
+            />
+
+            {goalsList.map(goalDetails => { 
+              return (
+                <GoalDetails
+                  deadline={goalDetails.deadline}
+                  created_timestamp={ goalDetails.created_timestamp}
+                  description={ goalDetails.description }
+                  goal_title={ goalDetails.goal_title }
+                  priority={ goalDetails.priority }
                 />
-                <textarea className={styles.text} />
-              </div>
-              <div className={styles.walletHeader}>
-                <div className={styles.iconTitle}>
-                  <a className={styles.loose10Kg}>Loose 10 Kg Weight</a>
-                </div>
-                <div className={styles.createdDecember28Container}>
-                  <span>Created</span>
-                  <span className={styles.span}> December 28, 2023</span>
-                </div>
-                <div className={styles.december282023Parent}>
-                  <textarea
-                    className={styles.december2820231}
-                    placeholder="December 28, 2023"
-                  />
-                  <div className={styles.deadline}>
-                    <span>Deadline</span>
-                    <span className={styles.span}>{` : `}</span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.progressStatus}>
-                <div className={styles.progressInformation}>
-                  <div className={styles.div1}>
-                    <span className={styles.span1}>{`30 `}</span>
-                    <span className={styles.span2}>/ 100</span>
-                  </div>
-                  <div className={styles.nominal}>30%</div>
-                </div>
-                <div className={styles.progressVisual}>
-                  <div className={styles.progressBar}>
-                    <div className={styles.background} />
-                    <div className={styles.progress} />
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+            })}
+            <div className={styles.autoLayoutHorizontal5} />
           </div>
         </div>
       </div>
