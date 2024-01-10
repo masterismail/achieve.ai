@@ -200,7 +200,6 @@ const Frame: NextPage = () => {
               </div>
             </div>
           </div>
-          <Goals />
           <b className={styles.seeHowIt}>See How It Works !!</b>
         </div>
         <div className={styles.frame26}>
