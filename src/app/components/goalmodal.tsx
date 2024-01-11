@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import GoalType from './goalsType';
 import type { NextPage } from 'next';
 import styles from './frame.module.css';
 import supabase from '../supabaseclient';
@@ -19,36 +20,51 @@ const style = {
   p: 4,
 };
 
-const Frame: React.FC = () => {
+type FrameType = {
+  appendGoalsList: (goal: GoalType) => void
+}
+
+const Frame: React.FC<FrameType> = ({ 
+  appendGoalsList
+}) => {
   const [inputValue, setInputValue] = useState('');
   const [input1Value, setInput1Value] = useState('');
   const [input2Value, setInput2Value] = useState('');
   const [input3Value, setInput3Value] = useState('');
 
   const [userId, setUserId] = useState<string | null>(null);
-  
-  
 
   const handleInsert = async () => {
-    try {
-      
-      const { data, error } = await supabase.from('goals').insert([
-        {
-          // Define the structure of your data here based on your table columns
+    const payload = {
+    //       // Define the structure of your data here based on your table columns
           goal_title: inputValue,
           deadline: input1Value,
           description: input2Value,
-          priority: input3Value,
-          // ... other columns ...
-        },
-      ]);
-      if (error) {
-        throw error;
-      }
-      console.log('Inserted data:', data);
-    } catch (error) {
-      console.error('Error inserting data:', error);
+      priority: input3Value,
+          created_timestamp: ''
     }
+    console.log('submitted goal form! payload to send to supabase', payload)
+    alert("form submitted!")
+    appendGoalsList(payload)
+    // try {
+      
+    //   const { data, error } = await supabase.from('goals').insert([
+    //     {
+    //       // Define the structure of your data here based on your table columns
+    //       goal_title: inputValue,
+    //       deadline: input1Value,
+    //       description: input2Value,
+    //       priority: input3Value,
+    //       // ... other columns ...
+    //     },
+    //   ]);
+    //   if (error) {
+    //     throw error;
+    //   }
+    //   console.log('Inserted data:', data);
+    // } catch (error) {
+    //   console.error('Error inserting data:', error);
+    // }
   };
 
   return (
@@ -73,14 +89,6 @@ const Frame: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className={styles.buttonWrapper}>
-            <button className={styles.button}>
-              <div className={styles.label}>Yes, confirm</div>
-              <div className={styles.iconcontainer}>
-                
-              </div>
-            </button>
-          </div>
         </div>
         <div className={styles.frameContainer}>
           <div className={styles.frameWrapper}>
@@ -102,14 +110,6 @@ const Frame: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button}>
-              <div className={styles.label}>Yes, confirm</div>
-              <div className={styles.iconcontainer}>
-               
-              </div>
-            </button>
-          </div>
         </div>
         <div className={styles.frameContainer}>
           <div className={styles.frameWrapper}>
@@ -128,14 +128,6 @@ const Frame: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button}>
-              <div className={styles.label}>Yes, confirm</div>
-              <div className={styles.iconcontainer}>
-                
-              </div>
-            </button>
           </div>
         </div>
         <div className={styles.frameContainer}>
@@ -159,42 +151,46 @@ const Frame: React.FC = () => {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button className={styles.button}  onClick={handleInsert}>
+            <button className={styles.button} onClick={handleInsert}>
               <div className={styles.label}>Yes, confirm</div>
-              <div className={styles.iconcontainer}>
-                
-              </div>
             </button>
           </div>
         </div>
-      </div>
+    </div>
     </div>
   );
 };
 
-const BasicModal: NextPage = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+type BasicModalType = {
+  openModal: () => void,
+  closeModal: () => void,
+  modalState: boolean,
+  appendGoalsList: (goal: GoalType) => void
+}
 
+const BasicModal: NextPage<BasicModalType> = ({ 
+  openModal, closeModal, modalState, 
+  appendGoalsList,
+}) => {
     return (
-        <div className={styles.container} >
-          <button onClick={handleOpen}  className={styles.buttondefaultprimaryiconTe}>
-      <img className={styles.iconplus} alt="" src="/Vector.svg" />
-      <div className={styles.add}>Add</div>
-    </button>
-    
+      <div className={styles.container} >
+        <button onClick={openModal}  className={styles.buttondefaultprimaryiconTe}>
+          <img className={styles.iconplus} alt="" src="/Vector.svg" />
+          <div className={styles.add}>Add</div>
+        </button>
         <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
+          open={modalState}
+          onClose={
+            closeModal
+          }
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
         >   
-            
-            <Frame />
-        
+          <Frame
+            appendGoalsList={appendGoalsList}
+          />
         </Modal>
-        </div>
+      </div>
   );
 };
 
