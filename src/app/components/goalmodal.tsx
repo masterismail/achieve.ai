@@ -42,27 +42,7 @@ const Frame: React.FC<FrameType> = ({ appendGoalsList }) => {
       created_timestamp: new Date().toISOString(),
     };
     console.log("submitted goal form! payload to send to supabase", payload);
-    alert("form submitted!");
     appendGoalsList(payload);
-    // try {
-
-    //   const { data, error } = await supabase.from('goals').insert([
-    //     {
-    //       // Define the structure of your data here based on your table columns
-    //       goal_title: inputValue,
-    //       deadline: input1Value,
-    //       description: input2Value,
-    //       priority: input3Value,
-    //       // ... other columns ...
-    //     },
-    //   ]);
-    //   if (error) {
-    //     throw error;
-    //   }
-    //   console.log('Inserted data:', data);
-    // } catch (error) {
-    //   console.error('Error inserting data:', error);
-    // }
   };
 
   return (
