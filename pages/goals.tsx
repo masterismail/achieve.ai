@@ -10,7 +10,7 @@ import GoalType from "@/app/components/goalsType";
 
 import Layout from "@/app/components/layout";
 import BasicModal from "@/app/components/goalmodal";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 async function signOutUser() {
   const { error } = await supabase.auth.signOut();
@@ -18,7 +18,7 @@ async function signOutUser() {
 }
 
 export default function Home() {
-  const [modalState, setModalState] = React.useState(false);
+  const [modalState, setModalState] = useState(false);
   const openModal = () => setModalState(true);
   const closeModal = () => setModalState(false);
   // I was intending on keeping high-level state here // State changing functions
@@ -34,19 +34,21 @@ export default function Home() {
     }
   };
 
-  useEffect(() => {
-    fetchUpdateData();
-  }, []);
-
   const appendGoalsList = async (goal: GoalType) => {
     try {
-      var goalFromDB = await postUserGoal(goal);
+      const goalFromDB = await postUserGoal(goal);
       setGoalsList([...goalsList, ...goalFromDB]);
     } catch (err) {
-      console.error("err in #appendGoalsList", err);
       // TODO NOTIFY user that something went wrong. show notification
+      console.error("err in #appendGoalsList", err);
     }
   };
+
+  useEffect(() => {
+    (async () => {
+      await fetchUpdateData();
+    })();
+  }, []);
 
   return (
     <div>

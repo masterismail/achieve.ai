@@ -35,11 +35,12 @@ const Frame: React.FC<FrameType> = ({ appendGoalsList }) => {
   const handleInsert = async () => {
     const payload = {
       //       // Define the structure of your data here based on your table columns
-      goal_title: inputValue || "example title",
+      question: inputValue || "example title",
       deadline: input1Value || "example deadline",
       description: input2Value || "example description",
       priority: input3Value || "example priority",
       created_timestamp: new Date().toISOString(),
+      status: "Started", // all statuses are "Started by default"
     };
     console.log("submitted goal form! payload to send to supabase", payload);
     appendGoalsList(payload);
